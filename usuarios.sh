@@ -1,7 +1,9 @@
 #!/bin/bash/
 
 # Lista de IPs o nombres de host
-HOSTS=$(cat "$1" | tr ',' ' ')
+HOSTS=$(tail -n +2 datosDebian.csv | awk -F',' '{print $5}')
+#$(tail -n +2 datosDebian.csv | awk -F',' '{print $5}') | paste -s
+#$(cat "$1" | tr ',' ' ')
 
 
 echo "==== Verificando computadoras Debian activas y obteniendo información remota ===="
