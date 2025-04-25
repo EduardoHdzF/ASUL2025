@@ -4,6 +4,7 @@
 HOSTS=$(tail -n +2 datosDebian.csv | awk -F',' '{print $5}')
 #$(tail -n +2 datosDebian.csv | awk -F',' '{print $5}') | paste -s
 #$(cat "$1" | tr ',' ' ')
+#paste -s $(tail -n +2 datosDebian.csv | awk -F',' '{print $5}' )
 
 
 echo "==== Verificando computadoras Debian activas y obteniendo información remota ===="
